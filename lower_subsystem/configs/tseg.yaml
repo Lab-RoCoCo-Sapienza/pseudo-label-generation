@@ -17,7 +17,7 @@ PSEUDOMASKS:
   PSEUDOMASKS_FOLDER: ["./pseudomasks/target_train"]
   EXTENSION: ["jpg"]
   PROCESS_METHOD: "grabcut"
-  MODEL_WEIGHTS: "./baselines/wgisd_R101/best_model.pth"
+  MODEL_WEIGHTS: "./output/wgisd_R101/best_model.pth"
   GRABCUT:
     MEDIAN_BLUR: 0
   SLIC:
