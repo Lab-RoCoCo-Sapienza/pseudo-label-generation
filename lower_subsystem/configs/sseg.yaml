@@ -1,0 +1,53 @@
+_BASE_: "./Base-RCNN-FPN.yaml"
+DATASETS:
+  TRAIN : ("wgisd_train",)  # 88 images
+  TEST : ("new_dataset_validation",)
+DATALOADER:
+  NUM_WORKERS : 4
+INPUT:
+  MASK_FORMAT : "bitmask"
+  MIN_SIZE_TRAIN: (1024,)
+  MAX_SIZE_TRAIN: 1024
+  MIN_SIZE_TEST: 1024
+  MAX_SIZE_TEST: 1024
+  RANDOM_FLIP: "horizontal"
+  CROP:
+    ENABLED: True
+    TYPE: "relative_range"
+    SIZE: [0.5, 0.5]
+SOLVER:
+  IMS_PER_BATCH : 1
+  BASE_LR : 0.001
+  MOMENTUM: 0.9
+  WEIGHT_DECAY: 0.0001
+  STEPS: []
+  MAX_ITER: 8800  # 100 epochs with batch_size = 1
+  CHECKPOINT_PERIOD : 88 
+  WARMUP_ITERS : 0
+  ITERS_PER_EPOCH: 88  
+MODEL:
+  MASK_ON: True
+  BACKBONE:
+    FREEZE_AT: 0
+  RESNETS:
+    DEPTH: 101
+  WEIGHTS: "./baselines/R101-FPN/model_final_a3ec72.pkl"
+  ROI_HEADS:
+    NUM_CLASSES : 1
+TEST:
+  EVAL_PERIOD: 88
+OUTPUT_DIR: "./output/wgisd_R101"
+SEED: 42
+ALBUMENTATIONS:
+  GAUSSIAN_BLUR:
+    ENABLED: True
+  GAUSSIAN_NOISE:
+    ENABLED: True
+  RANDOM_BRIGHTNESS_CONTRAST:
+    ENABLED: True
+  PIXEL_DROPOUT:
+    ENABLED: True
+    DROPOUT_MIN: 0.0
+    DROPOUT_MAX: 0.05
+PSEUDOMASKS:
+  ENABLED: False
