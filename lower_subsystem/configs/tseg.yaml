@@ -12,10 +12,10 @@ OUTPUT_DIR: "./output/target_dataset_video_pseudo_labels"
 SEED: 42
 PSEUDOMASKS:
   ENABLED: True
-  DATASET_NAME: ["target_train", "video"]
-  DATA_FOLDER: ["./datasets/target_dataset/train", "./datasets/video"]
-  PSEUDOMASKS_FOLDER: ["./pseudomasks/target_train", "./pseudomasks/video"]
-  EXTENSION: ["jpg", "png"]
+  DATASET_NAME: ["target_train"]
+  DATA_FOLDER: ["./datasets/target_dataset/train"]
+  PSEUDOMASKS_FOLDER: ["./pseudomasks/target_train"]
+  EXTENSION: ["jpg"]
   PROCESS_METHOD: "grabcut"
   MODEL_WEIGHTS: "./baselines/wgisd_R101/best_model.pth"
   GRABCUT:
