@@ -1,0 +1,7 @@
+####### PATHS IMAGES AND YOLO LABELS ########
+image_path: './Datasets/Validation/Detection/Images/'
+label_path: './Datasets/Validation/Detection/Labels/'
+####### DEFINE SKIPS ########
+skips: [2, 5]
+####### PATH WHERE TO SAVE RESULTS ########
+results_path: './Results__Pseudolabels/Validation/Features_Pseudolabels/Skip_'
