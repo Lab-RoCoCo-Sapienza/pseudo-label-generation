@@ -1,14 +1,14 @@
 _BASE_: "./sseg.yaml"
 DATASETS:
   # 781 images (88 + 94 + 599)
-  TRAIN: ("wgisd_train", "target_train", "video")
+  TRAIN: ("wgisd_train", "target_train")
 SOLVER:
   MAX_ITER: 78100  # train for 100 epochs
   CHECKPOINT_PERIOD: 781  # checkpoint every epoch
   ITERS_PER_EPOCH: 781
 TEST:
   EVAL_PERIOD: 781  # evaluate every epoch
-OUTPUT_DIR: "./output/target_dataset_video_pseudo_labels"
+OUTPUT_DIR: "./output/target_segmentator"
 SEED: 42
 PSEUDOMASKS:
   ENABLED: True
