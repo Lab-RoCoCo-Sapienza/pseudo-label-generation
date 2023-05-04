@@ -5,7 +5,7 @@ This repository contains the code related to the approaches described in these p
 
 ## System description
 
-![](images/system overview.jpg)
+![](./images/system overview.jpg)
 
 ## Cite as
 If you find this code useful, pleas cite us using the following bibtex entries:
