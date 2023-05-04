@@ -4,7 +4,8 @@ This repository contains the code related to the approaches described in these p
  * [Weakly and semi-supervised detection, segmentation and tracking of table grapes with limited and noisy data](https://www.sciencedirect.com/science/article/pii/S0168169923000121)
 
 ## System description
-**TBD**
+
+![](images/system overview.jpg)
 
 ## Cite as
 If you find this code useful, pleas cite us using the following bibtex entries:
